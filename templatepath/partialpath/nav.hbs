@@ -1,0 +1,143 @@
+<nav id="nav-bar" class="nav-bar ">
+  <div class="d-flex align-items-center">
+    {{!-- <button id="toggle-bar">
+      <span class="toggle-bar-1"></span>
+      <span class="toggle-bar-1 middle-bar"></span>
+      <span class="toggle-bar-1"></span>
+    </button> --}}
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="">
+    </a>
+  </div>
+  <div class="right-nav-section d-flex align-items-center">
+    <div id="ul-link" class="ul-link">
+      <ul class="m-0">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        {{#if user}}
+        {{#ifEqual user.role "customer"}}
+        <li>
+          <a href="/customer/order">Order</a>
+        </li>
+        {{!-- <li>
+          <a href="/customer/order-details">Details</a>
+        </li> --}}
+        {{else}}
+        <li>
+          <a href="/admin/order">Order</a>
+        </li>
+        {{/ifEqual}}
+        {{/if}}
+        {{#if user}}
+        {{!-- <li>
+             <div  class="profile-section">
+                <input type="checkbox" id="check">
+                <label for="check">
+                <i class="fa-solid fa-user profile"></i>
+                    <div class="circle"></div>
+                </label>
+                <div id="profile-box" class="profile-box">
+                    <div class="profile-details">
+                        <img src="../project 5/profile-pic.png" alt="" class="my">
+                        <div class=" hello">
+                            <div class="flex-col">
+                            <P>Pratik Rajak</P>
+                            <span>See your profile</span>
+                        </div>
+                            <div id="toggle" class="toggle" onclick="myfun()"></div>
+                        </div>
+    
+
+                    </div>
+                    <hr>
+                    <div class="profile-details">
+                        <img src="../project 5/feedback.png" alt="" class="my">
+                        <div class="my-name">
+                            <P>Give Feedback</P>
+                            <span>Help us to improve the new design </span>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="profile-name">
+                        <div class="option">
+                            <img src="../project 5/setting.png" alt="" class="my">
+                            <p>Setting & Privacy</p>
+                        </div>
+                        <div class="my-name">
+                            <img src="../project 5/arrow.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="profile-name">
+                        <div class="option">
+                            <img src="../project 5/help.png" alt="" class="my">
+                            <p>Help & Support</p>
+                        </div>
+                        <div class="my-name">
+                            <img src="../project 5/arrow.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="profile-name">
+                        <div class="option">
+                            <img src="../project 5/display.png" alt="" class="my">
+                            <p>Display & Accessibility</p>
+                        </div>
+                        <div class="my-name">
+                            <img src="../project 5/arrow.png" alt="">
+                        </div>
+
+                    </div>
+                    <div class="profile-name">
+                        <div class="option">
+                            <img src="../project 5/logout.png" alt="" class="my">
+                            <p>Logout</p>
+                        </div>
+                        <div class="my-name">
+                            <img src="../project 5/arrow.png" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </li> --}}
+        <li>
+          <form id="logout" action="/logout" method="POST">
+            <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+          </form>
+
+        </li>
+        {{else}}
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <li>
+          <a href="/register">Register</a>
+        </li>
+        {{/if}}
+      </ul>
+
+    </div>
+    <li>
+      <a id="cart" href="/cart" class="d-flex align-items-center ">
+        <i class="fa-solid fa-cart-shopping"></i>
+        {{!-- {{session.cart.totalQty}} --}}
+        <div class="cartCounterDiv d-flex align-items-center justify-content-center">
+          <p id="cartCounter" class="total-cart m-0 ">
+            {{#if session.cart}}
+            {{session.cart.totalQty}}
+            {{else }}
+            0
+            {{/if}}
+          </p>
+        </div>
+
+        {{!-- span#cart --}}
+        {{!-- <img src="/img/cart.png" alt=""> --}}
+      </a>
+    </li>
+  </div>
+</nav>

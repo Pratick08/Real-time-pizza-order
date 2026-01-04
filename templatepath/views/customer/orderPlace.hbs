@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../js/favicon.ico" type="image/x-icon">
+    {{!--
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> --}}
+
+    <title>Real Time Pizza </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    {{>nav}}
+    <form action="/order" method="POST" class="adjust">
+        <div class="d-flex " style=" margin:50px;background:white adjust">
+            <div style="flex: 0 0 auto;width: 66.66666667%; padding:20px; background:white;">
+                <div>
+                    <h2 style="font-size: 26px; font-weight: 600;">Address Details</h2>
+
+                    <div class="d-flex flex-column">
+                        <h6>CONTACT DETAILS</h6>
+                        <div class="d-flex " style="margin-bottom:40px  ;">
+                            {{!-- <label for="">Name</label> --}}
+                            <div style="width: 100%;margin-right:40px;"><input name="name" type="text"
+                                    class="form-control " placeholder="Name*" style=""></div>
+                            {{!-- <label for="">Phone Number</label> --}}
+                            <div style="width: 100%;">
+                                <input name="phone" type="text" class="form-control " placeholder="Phone Number*"
+                                    style="">
+                                <span class="text-danger" style="font-size: 12px">{{messages.error}} </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <h6>ADDRESS</h6>
+                        <div class="d-flex flex-column" style="margin-bottom:40px  ;">
+                            <div class="d-flex" style="margin-bottom: 40px;">
+                                {{!-- <label for="">Name</label> --}}
+                                <input name="pin" type="text" class="form-control " placeholder="Pin Code*  "
+                                    style=" margin-right:40px">
+                                {{!-- <label for="">Phone Number</label> --}}
+                                <input name="address" type="text" class="form-control "
+                                    placeholder="Address(House No,Building,Streat,Area)*" style="">
+                            </div>
+                            <div class="d-flex ">
+                                <input name="town" type="text" class="form-control " placeholder="Locality/Town*"
+                                    style="margin-right:40px">
+                                <input name="state" type="text" class="form-control " placeholder="State*" style="">
+                            </div>
+                        </div>
+
+                    </div>
+                    {{!-- <div>
+                        <input name="phone" type="text" class="form-control " placeholder="Enter Phone No.">
+                        <span class="text-danger" style="font-size: 12px">{{messages.error}} </span>
+                        <input name="address" type="text" class="form-control my-4" placeholder="Enter Address">
+                    </div> --}}
+                    {{!-- <button type="submit" class="btn float-center">Order Now</button> --}}
+                </div>
+                <div class="add-info md-mb-40">
+                    <h4 class="mb-20">Additional Information</h4>
+                    <div class="form-group p-0">
+                        <textarea class="form-control" placeholder="Order Notes" style="height: 137px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column" style="flex: 0 0 auto; width: 33.33333333%;padding:20px">
+                <h2 style="font-size: 26px; font-weight: 600;">Your Order</h2>
+                {{#each session.cart.item as |i|}}
+                <div class=" d-flex align-items-center" style="margin-bottom: 50px;">
+                    <div class="cart-order-pizza-img">
+                        <img class="order-pizza" src="/img/{{i.items.image}}" alt="">
+                    </div>
+                    <div class="pizza-nameSize d-flex flex-column">
+                        <p class="m-0">Chicken Pepper Crunch</p>
+                        <div class="d-flex flex-column">
+                            <small>{{i.items.size}}</small>
+                            <div class="d-flex">
+                                <p class="m-0">₹{{i.items.price}}</p> x <p class="m-0">{{i.qty}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                <div class=" d-flex  flex-column">
+                    <hr style="margin: 20px 0px; border-top: 1px solid  #00000052;">
+                    <div class="d-flex justify-content-between">
+                        <p>Items Subtotal</p>
+                        <span>₹{{session.cart.totalPrice}}</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Shipping Cost</p>
+                        <span>₹50</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p style="font-weight: 700;">Order Total</p>
+                        <span style="font-weight: 700;">₹{{add session.cart.totalPrice 50}}</span>
+                    </div>
+                    <hr style="margin: 20px 0px; border-top: 1px solid  #00000052;">
+                </div>
+                <div class="pay-method mb-5">
+                    <h2 style="font-size: 26px; font-weight: 600;">Payment Method</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="cash_delivery" checked="">
+                        <label class="form-check-label" for="cash_delivery">Cash on delivery</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn float-center">Place Order</button>
+
+            </div>
+
+        </div>
+    </form>
+    {{>footer}}
+</body>
+<script src="../../js/app.js"></script>
+
+
+</html>
+{{!-- box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2); --}}

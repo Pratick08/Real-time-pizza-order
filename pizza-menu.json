@@ -1,0 +1,82 @@
+[
+  {
+    "_id": { "$oid": "5eee651f739f8c674fd736ee" },
+    "name": "Double Chicken Sausage",
+    "price": "250",
+    "size": "Small",
+    "description": "A delicious double portion of chicken sausage, grilled to perfection.",
+    "image": "Double Chicken Sausage.jpg",
+    "categorie": "pizza"
+  },
+  {
+    "_id": { "$oid": "5eee6671a27a66807cf2bea3" },
+    "name": "Double Paneer Supreme",
+    "price": "300",
+    "size": "Medium",
+    "description": "A generous serving of paneer, grilled and layered with fresh veggies and sauces.",
+    "image": "Double Paneer Supreme.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee6692a27a66807cf2bea4" },
+    "name": "Chicken Sausage",
+    "price": "200",
+    "size": "Small",
+    "description": "Single chicken sausage served with a side of tangy sauce.",
+    "image": "Chicken Sausage.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee66a5a27a66807cf2bea5" },
+    "name": "Double Cheese",
+    "price": "500",
+    "size": "Large",
+    "description": "A decadent double layer of cheese melted over fresh ingredients.",
+    "image": "Double Cheese.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee66c4a27a66807cf2bea6" },
+    "name": "Chicken N Corn Delight",
+    "price": "350",
+    "size": "Medium",
+    "description": "A delightful mix of chicken and corn with spices, served warm.",
+    "image": "Chicken N Corn Delight.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee66cfa27a66807cf2bea7" },
+    "name": "Chicken Pepper Crunch",
+    "price": "200",
+    "size": "Small",
+    "description": "Crispy chicken pieces with a peppery crunch, perfect for snacking.",
+    "image": "Chicken Pepper Crunch.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee66eea27a66807cf2bea8" },
+    "name": "Chicken Tikka Supreme",
+    "price": "600",
+    "size": "Large",
+    "description": "Succulent chicken tikka pieces marinated in spices, grilled to perfection.",
+    "image": "Chicken Tikka Supreme.jpg",
+    "categorie": "pizza"
+
+  },
+  {
+    "_id": { "$oid": "5eee6717a27a66807cf2bea9" },
+    "name": "Chicken Pepperoni",
+    "price": "500",
+    "size": "Medium",
+    "description": "Spicy chicken pepperoni with fresh toppings on a soft base.",
+    "image": "Chicken Pepperoni.jpg",
+    "categorie": "pizza"
+
+  }
+  
+]

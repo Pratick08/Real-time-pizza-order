@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../js/favicon.ico" type="image/x-icon">
+  {{!--
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> --}}
+
+  <title>Real Time Pizza </title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+  {{>nav}}
+{{!-- <section class="home-banner  overflow-h adjust" style=" opacity: 1; height: 1465px;">
+			
+			<div class="d-flex align-items-center">
+				<div class=" home-left-content wow fadeInLeft animated" style="visibility: visible;">
+					<div class="home-banner-content">
+						<h1 class="home-banner-title">Handmade, With an Extra Pinch of <span class="red">Love</span></h1>
+						<div class="home-banner-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class=" home-right-img">
+					<div class="home-banner-img">
+						<div class="home-img wow fadeInRight animation-delay-5 animated" style="visibility: visible;">
+							<div class="home-img-1">
+								<img src="/img/homeImg1.png" alt="banner-img">
+							</div>
+						</div>
+						<div class="home-img-bottom wow fadeInUp animation-delay-5 animated" style="visibility: visible;">
+							<img src="images/banner-img-bottom.png" alt="banner-img-bottom">
+						</div>
+						<div class="slider-round-box wow fadeInRight animated" style="visibility: visible; overflow:hidden">
+							<div class="slider-round" style="height: 835.35px; width:835.35px">
+								<span class="slider-round-line"></span>
+								<div class="buy-one-get">
+									<img src="images/buy-one-get.png" alt="Vacter Image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> --}}
+<div class="adjust">
+  <div class="home-sec d-flex align-items-center">
+    <div class="col-xl-5 col-lg-6 col-md-6 " style="margin-left: 50px;">
+				<div class="home-left-content wow fadeInLeft animated" style="visibility: visible;">
+					<div class="home-banner-content">
+						<h1 class="home-banner-title">Handmade, With an Extra Pinch of <span class="red">Love</span></h1>
+						<div class="home-banner-desc">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						</div>
+						
+					</div>
+				</div>
+  </div>
+  <div class="col-xl-7 col-lg-6 col-md-6  home-right-img">
+					<div class="home-banner-img">
+						<div class="  home-img wow " 
+							<div class="home-img-1">
+								<img src="/img/homeImg1.png" alt="banner-img" ">
+							</div>
+						</div>
+						<div class="slider-round-box wow fadeInRight animated" style="overflow:hidden;">
+							<div class="slider-round" style="height: 654.35px; width:654.35px">
+								<span class="slider-round-line"></span>
+								<div class="buy-one-get">
+									{{!-- <img src="images/buy-one-get.png" alt="Vacter Image"> --}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>
+  {{!--************************************ home section******************************* --}}
+  
+  {{!--************************************ home section End******************************* --}}
+
+  <div class="about-us adjust">
+    <h1 class="px-5 all-pizza-heading about">ABOUT <b class="red">US</b></h1>
+    <div class="wrap-container d-flex align-items-center justify-content-center">
+      <div class="about-us-container">
+        <img src="/img/select-pizza.png" alt="">
+        <h2>
+          Made with love
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugiat officia excepturi vero fugit commodi
+          magni asperiores alias mollitia veritatis? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Reprehenderit quod dicta nobis veritatis, sequi vero cupiditate illum nulla exercitationem impedit.</p>
+      </div>
+      <div class="about-us-container">
+        <img src="/img/delivery.png" alt="">
+        <h2>
+          30 minuites delivery
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugiat officia excepturi vero fugit commodi
+          magni asperiores alias mollitia veritatis? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Reprehenderit quod dicta nobis veritatis, sequi vero cupiditate illum nulla exercitationem impedit.</p>
+      </div>
+      <div class="about-us-container">
+        <img src="/img/about.png" alt="">
+        <h2>
+          Share With Friends
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugiat officia excepturi vero fugit commodi
+          magni asperiores alias mollitia veritatis? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Reprehenderit quod dicta nobis veritatis, sequi vero cupiditate illum nulla exercitationem impedit.</p>
+      </div>
+    </div>
+  </div>
+  {{!--****************************************Menu***************************************** --}}
+
+  <div id="menu-container" class="d-flex align-items-center menu-section flex-column  adjust ">
+    {{!-- <div class="flex">
+      <button id="all" class="btn" value="ALL" onclick="filterMenu('all')">ALL</button>
+      <button id="pizzaBtn" class="btn " value="PIZZA" onclick="filterMenu('pizza')">PIZZA</button>
+      <button id="burgerBtn" class="btn " value="BURGER" onclick="filterMenu('burger')">BURGER</button>
+    
+    </div> --}}
+    <h1 class="px-5 all-pizza-heading ">OUR DELICIOUS <b class="red">PIZZAS</b></h1>
+    <div class=" py-5  grid-container">
+
+      {{#each pizzas as |pizza|}}
+
+
+      <div class="menu-boxes  d-flex flex-column pizza-boxes justify-content-center align-items-center">
+
+        <div class="order-div"><img class="order-pizzas " src="/img/{{pizza.image}}" alt=""></div>
+
+
+        <div class="d-flex flex-column align-items-center justify-content-center" style="padding: 0px 10px;">
+          <p class="m-0 fs-4 font-weight-bold" style="font-size: 20px;">{{pizza.name}}</p>
+          <p class="text-center " style="font-size: 13px; color:rgb(28, 24, 24)">{{pizza.description}}</p>
+          {{!-- Bite into supreme delight of Grilled
+          Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers --}}
+          <div class="d-flex mb-4  justify-content-center align-item-center">
+
+            <div class="name-size">{{pizza.size}}</div>
+
+          </div>
+          <div class="d-flex align-items-center ">
+            <h5 class="m-0 pr-5 price">₹{{pizza.price}}</h5>
+            <button data-pizza='{{ pizza._id }}' class="cart-button">
+
+              <span>+</span>
+              <span>Add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>
+  {{!--****************************************Menu end***************************************** --}}
+  {{!-- ******************************************* Story section************************************************ --}}
+  <section class="our-story right-padding position-r mb-5 adjust ">
+    <h1 class="px-5 all-pizza-heading mb-5 pb-5">OUR <b class="red">STORY</b></h1>
+    <div class="black-jamun  elementToAnimate fadeInLeft  ">
+      <img class="animation-delay-5" src="/img/black-jamun.png" alt="Vacter Image">
+    </div>
+    <div class="our-story-inner">
+      <div class="row row-section">
+        <div class="col-xl-7 col-lg-7 col-md-12  elementToAnimate fadeInLeft order-md_2 ">
+          <div class="story-img text-center">
+            <img src="/img/storyImg.png" alt="Our Story">
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 mt-5 pt-5 elementToAnimate fadeInRight order-md_1 ">
+          <div class="section-heading section-heading-right">
+            <h4 class="red font-family">Top Story----</h4>
+            <h2 class="font-family" style="font-size: 40px; font-weight:bold; line-height: 55px;">The Pizza Has
+              Excellent Of Quality Foods</h2>
+          </div>
+          <div class="story-content md-mb-40">
+            <div class="our-story-desc">
+              <p>mmerse yourself in the extraordinary world of culinary delight with our quality food pizza, where each
+                slice is a testament to excellence. Our commitment to using the finest ingredients begins with a
+                meticulously crafted dough, delivering a perfect balance of softness and crunch. A symphony of flavors
+                unfolds as our rich tomato sauce, made from sun-ripened tomatoes, harmonizes with the premium cheese
+                blend, creating a luscious and indulgent base.</p>
+            </div>
+            <button class="btn">READ MORE <i class="fa-solid fa-arrow-right"></i></button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- ******************************************* Story section End************************************************
+  --}}
+  {{!-- ******************************************* Customer section************************************************--}}
+  <div class="customer-review adjust">
+    <h1 class="px-5 all-pizza-heading about">OUR CUSTOMER <b class="red">REVIEWS</b></h1>
+    {{!-- d-flex flex-column align-items-center --}}
+    <div class=" grid-container customer-container">
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo1.png" alt="">
+        <h3 class="name">Pratik Rajak</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo2.png" alt="">
+        <h3 class="name">Sayan Roy</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo3.png" alt="">
+        <h3 class="name">Mousam Gorai</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo4.png" alt="">
+        <h3 class="name">Raj Verma</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo5.png" alt="">
+        <h3 class="name">shreya Ghosal</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo6.png" alt="">
+        <h3 class="name">Souvik Karmakar</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo7.png" alt="">
+        <h3 class="name">Bishal Bauri</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+
+      </div>
+      <div class="customers d-flex flex-column align-items-center justify-content-center">
+        <img src="/img/photo8.png" alt="">
+        <h3 class="name">Atish Mondal</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit id laboriosam, iste quaerat amet at quos
+          molestiae ipsum praesentium error voluptate odio numquam reprehenderit? Excepturi ipsam quaerat
+          exercitationem nobis iure.</p>
+      </div>
+    </div>
+  </div>
+  {{!-- ******************************************* Customer section
+  end************************************************ --}}
+  {{>footer}}
+
+</body>
+<script src="../js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{{!--
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> --}}
+
+</html>

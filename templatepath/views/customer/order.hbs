@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Real Time Pizza</title>
+    <link rel="icon" href="../js/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+    {{>nav}}
+    <section class="orders light-section adjust">
+        <div class="container mx-auto pt-12">
+            <h1 class=" order-pizza-heading ">All Orders</h1>
+
+            {{!-- <div id="success-alert"
+                class="d-flex align-items-center bg-success  text-white text-sm font-bold px-4 py-3" role="alert">
+                <i class="fa-solid fa-circle-info"></i>
+                <p class="mb-0">Order place succesfully</p>
+            </div> --}}
+
+            <table class="order-table table-auto bg-light mb-5">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Orders</th>
+                        <th class="px-4 py-2 text-left">Phone</th>
+                        <th class="px-4 py-2 text-left">Address</th>
+                        <th class="px-4 py-2 text-left">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if orders}}
+                    {{#each orders}}
+                    <tr>
+                        <input id="hiddenOrderStatus" class="hiddenOrderStatus" type="hidden" value="{{status}}">
+                        <td class="border px-4 py-2 order-td">
+                            <a class="link " href="/customer/orders/{{_id}}" style="color: red;">{{_id}}</a>
+                        </td>
+                        <td class="border px-4 py-2 order-td">
+                            {{phone}}
+                        </td>
+                        <td class="border px-4 py-2 order-td">
+                            <div><span style="font-weight: bold; margin-right:  12px">PIN: </span>{{pin}},</div>
+                            <div><span style="font-weight: bold; margin-right: 12px">ADDRESS:</span> {{address}},</div>
+                            <div><span style="font-weight: bold; margin-right: 12px">TOWN:</span>{{town}},</div>
+                            <div><span style="font-weight: bold; margin-right: 12px" margin-right 12px>STATE:</span>{{state}}</div>
+                        </td>
+                        <td class="border px-4 py-2 order-td">
+                            {{formattedTimestamp}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                    {{else}}
+                    <tr>
+                        <td class="p-4"><span>No orders found!</span></td>
+                    </tr>
+                    {{/if}}
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    {{>footer}}
+</body>
+<script src="../../js/app.js"></script>
+
+</html>
